@@ -1,0 +1,19 @@
+{
+  "name": "nihilo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlakeGuilloud/nihilo.git"
+  },
+  "author": "Blake Guilloud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlakeGuilloud/nihilo/issues"
+  },
+  "homepage": "https://github.com/BlakeGuilloud/nihilo#readme"
+}
