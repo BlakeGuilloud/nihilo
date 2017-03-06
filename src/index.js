@@ -2,26 +2,25 @@ const fs = require('fs');
 const path = require('path');
 
 function createProject(projectName) {
-  fs.mkdir(projectName, (err) => {
-    if (err) return;
+  return fs.mkdir(projectName, (err) => {
+    if (err) return 'Something went wrong..';
 
-    const filePath = getFilePath(projectName);
-    const directory = getDir(filePath);
+    return readTemplates(projectName);
   });
 }
 
-function getDir(filePath) {
+function readTemplates(projectName) {
   return fs.readdir(`/${__dirname}/templates`, (err, files) => {
     return files.map((file) => {
-      return createFile(file);
+      return createFile(file, projectName);
     });
   });
 }
 
-function createFile(fileName, clientPath) {
-  const filePath = getFilePath(fileName, clientPath);
+function createFile(fileName, projectName) {
+  const filePath = getFilePath(fileName, projectName);
   const fileTemplate = getTemplate(fileName);
-  console.log(filePath);
+
   return fs.writeFileSync(filePath, fileTemplate);
 }
 
@@ -44,7 +43,7 @@ function getFileDest(projectName) {
   const filePath = [
     process.cwd(),
     projectName,
-  ].join('');
+  ].join('/');
 
   return path.normalize(filePath);
 }

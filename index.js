@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-// const commander = require('commander');
-const src = require('./src');
-console.log('src', src);
-src.createProject('test');
-//
-// commander.version('0.1.5');
-// commander.command('component [value] [value]')
-//   .description('creates a templated React Component')
-//   .action((name, path) => {
-//     rcc.createFile(name, 'components', path);
-//   });
-//
-// commander.parse(process.argv);
+const commander = require('commander');
+const nihilo = require('./nihilo');
+
+nihilo.createProject('test');
+
+commander.version('0.1.5');
+commander.command('nihilo [value]')
+  .description('Create a Nihilo Project')
+  .action((name) => {
+    nihilo.createProject(name);
+  });
+
+commander.parse(process.argv);
