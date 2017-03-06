@@ -10,7 +10,7 @@ function createProject(projectName) {
 }
 
 function readTemplates(projectName) {
-  return fs.mkdir('src', (err) => {
+  return fs.mkdir(`${projectName}/src`, (err) => {
     if (err) return 'Something went wrong..';
 
     return fs.readdir(`/${__dirname}/templates`, (err, files) => {
