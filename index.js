@@ -4,10 +4,9 @@ const commander = require('commander');
 const nihilo = require('./src');
 
 commander.version('0.1.5');
-commander.command('nihilo [value]')
+commander.command('[value]')
   .description('Create a Nihilo Project')
   .action((projectName) => {
-    console.log('porject', projectName);
     nihilo.createProject(projectName);
   });
 

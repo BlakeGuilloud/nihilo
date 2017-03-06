@@ -12,7 +12,7 @@ function createProject(projectName) {
 function readTemplates(projectName) {
   return fs.readdir(`/${__dirname}/templates`, (err, files) => {
     return files.map((file) => {
-      return createFile(file, projectName);
+      createFile(file, projectName);
     });
   });
 }
