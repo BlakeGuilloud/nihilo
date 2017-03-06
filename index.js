@@ -3,7 +3,6 @@
 const commander = require('commander');
 const nihilo = require('./src');
 
-nihilo.createProject('test');
 commander.version('0.1.5');
 commander.command('create [value]')
   .description('Create a Nihilo Project')
