@@ -3,13 +3,13 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'ganon': [path.join(__dirname, './lib/index.js')],
+    'RENAME': [path.join(__dirname, './lib/index.js')],
   },
   output: {
     path: path.join(__dirname, './dist'),
     filename: '[name].min.js',
     libraryTarget: 'umd',
-    library: 'ganon',
+    library: 'RENAME',
   },
   module: {
     loaders: [

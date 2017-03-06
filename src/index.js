@@ -10,11 +10,15 @@ function createProject(projectName) {
 }
 
 function readTemplates(projectName) {
-  return fs.readdir(`/${__dirname}/templates`, (err, files) => {
-    return files.map((file) => {
-      createFile(file, projectName);
+  return fs.mkdir('src', (err) => {
+    if (err) return 'Something went wrong..';
+
+    return fs.readdir(`/${__dirname}/templates`, (err, files) => {
+      return files.map((file) => {
+        createFile(file, projectName);
+      });
     });
-  });
+  })
 }
 
 function createFile(fileName, projectName) {

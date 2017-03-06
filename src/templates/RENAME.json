@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "RENAME",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -30,7 +30,7 @@
   "files": [
     "dist/**"
   ],
-  "repository": "git@github.com:BlakeGuilloud/test.git",
+  "repository": "git@github.com:BlakeGuilloud/RENAME.git",
   "dependencies": {
     "webpack": "^2.2.1"
   }
